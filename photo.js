@@ -1,4 +1,9 @@
+
+//Set variables
 var cloudinary = require("cloudinary-core");
+var CLOUDINARY_URL = 'httmps://api.cloudinary.com/v1_1/dzaz05xgm/upload';
+var fileUpload = document.getElementById('file-upload');
+var CLOUDINARY_UPLOAD_PRESET= '';
 
 const vid = document.querySelector('video');
 navigator.mediaDevices.getUserMedia({video: true}) // request cam
@@ -34,9 +39,7 @@ function upload(blob){
   document.body.appendChild(a);
   a.click();
 }
-var CLOUDINARY_URL = 'httmps://api.cloudinary.com/v1_1/dzaz05xgm/upload'
-var fileUpload = document.getElementById('file-upload');
-var CLOUDINARY_UPLOAD_PRESET= '';
+
 
 fileUpload.addEventListener('change', function() {
     //console.log(event)
